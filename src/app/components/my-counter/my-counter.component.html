@@ -1,4 +1,22 @@
-<button (click)="increment()">Increment</button>
-<div>Current Count: {{ count$ | async }}</div>
-<button (click)="decrement()">Decrement</button>
-<button (click)="reset()">Reset Counter</button>
+<div class="counter">
+  <div class="container mt-4">
+    <div><h2>Current Count: {{ count$ | async }}</h2></div>
+    <div class="row mt-4">
+      <div class="col-4">
+        <button mat-fab class="btn-remove" (click)="decrement()">
+          <mat-icon>remove</mat-icon>
+        </button>
+      </div>
+      <div class="col-4">
+        <button mat-fab color="accent" (click)="reset()">
+          <mat-icon>restart_alt</mat-icon>
+        </button>
+      </div>
+      <div class="col-4">
+        <button mat-fab class="btn-add" (click)="increment()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
