@@ -1,0 +1,12 @@
+<div class="register py-5">
+  <div class="container">
+    <form [formGroup]="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+        <mat-error *ngIf="form.controls['email'].invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary">Custom theme</button>
+  </div>
+</div>
